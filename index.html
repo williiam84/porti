@@ -1,0 +1,151 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Showcase — Projeto Freelancer</title>
+  <style>
+    /* Reset simples */
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial}
+    :root{
+      --bg:#0f1724; /* escuro */
+      --card:#0b1220;
+      --accent:#6ee7b7;
+      --accent-2:#60a5fa;
+      --muted:#94a3b8;
+    }
+    body{background:linear-gradient(180deg,#071126 0%, #071428 60%), var(--bg); color:#e6eef8; -webkit-font-smoothing:antialiased}/* container */
+.wrap{max-width:1100px;margin:40px auto;padding:28px}
+
+/* header */
+header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:700;color:#022c22}
+.brand h1{font-size:18px}
+nav{display:flex;gap:14px;align-items:center}
+nav a{color:var(--muted);text-decoration:none;font-size:14px}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin-top:12px}
+.hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));padding:28px;border-radius:16px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+.hero h2{font-size:28px;margin-bottom:8px}
+.hero p{color:var(--muted);line-height:1.5;margin-bottom:18px}
+.btn{display:inline-block;padding:12px 18px;border-radius:10px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#022c22;font-weight:700;text-decoration:none}
+
+/* preview phone mock */
+.mock{background:#02111b;border-radius:28px;padding:18px;width:100%;max-width:420px;margin:0 auto}
+.screen{background:#051427;border-radius:12px;padding:12px;height:520px;overflow:hidden;display:flex;flex-direction:column}
+.topbar{height:34px;display:flex;align-items:center;justify-content:space-between;padding:6px 10px;color:var(--muted);font-size:13px}
+.screenshot{flex:1;background:linear-gradient(180deg,#062033,#061826);border-radius:8px;padding:14px;display:flex;flex-direction:column;gap:12px}
+.hero-site-title{font-size:18px;font-weight:700}
+.feature-list{display:flex;flex-direction:column;gap:8px}
+.feature{background:rgba(255,255,255,0.03);padding:8px;border-radius:8px;font-size:14px;color:var(--muted)}
+
+/* sections */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
+.card{background:var(--card);padding:16px;border-radius:12px}
+.card h3{margin-bottom:8px}
+.muted{color:var(--muted);font-size:14px}
+
+footer{margin-top:22px;display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:13px}
+
+/* responsivo */
+@media(max-width:880px){
+  .hero{grid-template-columns:1fr;}
+  .screen{height:420px}
+  .grid-3{grid-template-columns:1fr}
+}
+
+/* animações simples */
+.fade-up{animation:fadeUp .7s ease both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">WG</div>
+        <div>
+          <h1>William Gabriel — Freelance</h1>
+          <div class="muted">Sites rápidos, responsivos e prontos pra vender</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#">Serviços</a>
+        <a href="#">Portfólio</a>
+        <a href="#contact" class="btn">Contratar</a>
+      </nav>
+    </header><section class="hero">
+  <div class="hero-card fade-up">
+    <h2>Site Profissional em poucas horas</h2>
+    <p>Design limpo, responsivo e otimizado para conversão — perfeito para portfólio, loja pequena ou landing page de produto.</p>
+    <div style="display:flex;gap:10px;align-items:center">
+      <a class="btn" href="#contact">Quero meu site</a>
+      <div class="muted">ou me chama no Direct</div>
+    </div>
+
+    <div class="grid-3" style="margin-top:18px">
+      <div class="card">
+        <h3>Layout moderno</h3>
+        <div class="muted">Tipografia clara, hierarquia visual e CTA bem posicionado.</div>
+      </div>
+      <div class="card">
+        <h3>Responsivo</h3>
+        <div class="muted">Funciona em celular, tablet e desktop.</div>
+      </div>
+      <div class="card">
+        <h3>Entrega rápida</h3>
+        <div class="muted">Protótipo funcional para gravar no Reels em minutos.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mock fade-up" aria-hidden="true">
+    <div class="screen">
+      <div class="topbar"><span>AlémDoLimite.site</span><span>10:24</span></div>
+      <div class="screenshot">
+        <div class="hero-site-title">Reset Alimentar</div>
+        <div class="muted">Plano de 10 dias • eBook • Acompanhamento</div>
+        <div class="feature-list">
+          <div class="feature">✔ Layout mobile-first</div>
+          <div class="feature">✔ Checkout integrado</div>
+          <div class="feature">✔ Área de contato com WhatsApp</div>
+        </div>
+        <div style="margin-top:auto;display:flex;gap:8px;align-items:center">
+          <a class="btn" href="#contact">Comprar agora</a>
+          <div class="muted">ou <a href="#" style="color:var(--accent)">ver demo</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="margin-top:18px" id="contact">
+  <div class="hero-card">
+    <h3>Contato rápido</h3>
+    <p class="muted">Quer gravar esse tipo de vídeo pro seu negócio? Eu monto o site e te entrego um protótipo pronto pra você mostrar no Reels.</p>
+    <form onsubmit="event.preventDefault(); openWhatsApp();" style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
+      <input id="name" placeholder="Seu nome" style="flex:1;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" />
+      <input id="email" placeholder="Email ou @instagram" style="flex:1;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" />
+      <button class="btn" type="submit">Me chama no WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div>© "Além do Limite" — Projetos Freelance</div>
+  <div class="muted">Pronto para gravar? Use transições suaves e destaque o CTA.</div>
+</footer>
+
+  </div>  <script>
+    function openWhatsApp(){
+      const name = document.getElementById('name').value || 'Olá';
+      const email = document.getElementById('email').value || '';
+      const text = encodeURIComponent(name + ' - Quero um site parecido com esse. ' + email);
+      const phone = '5527988223701'; // substitua pelo seu número com DDI+DDD
+      window.open('https://wa.me/' + phone + '?text=' + text, '_blank');
+    }
+  </script></body>
+</html>
